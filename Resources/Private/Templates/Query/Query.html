@@ -1,0 +1,76 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<f:layout name="Default" />
+<f:debug>{_all}</f:debug>
+<f:section name="Main">
+    <f:if condition="{data.pi_flexform}">
+       <f:if condition="{flexform.fieldset} == 'template_1'">
+           <f:render partial="Struct" arguments="{result: result}" />
+       </f:if>
+       
+       <f:if condition="{flexform.fieldset} == 'template_2'">
+           <f:render partial="Filial" arguments="{result: result}" />
+       </f:if>
+
+       <f:if condition="{flexform.fieldset} == 'template_3'">
+           <f:render partial="Repres" arguments="{result: result}" />
+       </f:if>
+       
+       <f:if condition="{flexform.fieldset} == 'template_4'">
+           <f:render partial="Edu_level" arguments="{result: result}" />
+       </f:if>
+
+       <f:if condition="{flexform.fieldset} == 'template_5'">
+           <f:render partial="Count_stud" arguments="{result: result}" />
+       </f:if>
+       
+       <f:if condition="{flexform.fieldset} == 'template_6'">
+           <f:render partial="Enroll" arguments="{result: result}" />
+       </f:if>
+
+       <f:if condition="{flexform.fieldset} == 'template_7'">
+           <f:render partial="Education" arguments="{result: result}" />
+       </f:if>
+       
+       <f:if condition="{flexform.fieldset} == 'template_8'">
+           <f:render partial="Edu_adapt" arguments="{result: result}" />
+       </f:if>
+
+       <f:if condition="{flexform.fieldset} == 'template_9'">
+           <f:render partial="Science" arguments="{result: result}" />
+       </f:if>
+       
+       <f:if condition="{flexform.fieldset} == 'template_10'">
+           <f:render partial="Stud_job" arguments="{result: result}" />
+       </f:if>
+
+       <f:if condition="{flexform.fieldset} == 'template_11'">
+           <f:render partial="Pps" arguments="{result: result}" />
+       </f:if>
+       
+       <f:if condition="{flexform.fieldset} == 'template_12'">
+           <f:render partial="Edu_cab" arguments="{result: result}" />
+       </f:if>
+       <f:if condition="{flexform.fieldset} == 'template_13'">
+           <f:render partial="Edu_pract" arguments="{result: result}" />
+       </f:if>
+
+       <f:if condition="{flexform.fieldset} == 'template_14'">
+           <f:render partial="Library" arguments="{result: result}" />
+       </f:if>
+
+       <f:if condition="{flexform.fieldset} == 'template_15'">
+           <f:render partial="Sport" arguments="{result: result}" />
+       </f:if>
+       
+       <f:if condition="{flexform.fieldset} == 'template_16'">
+           <f:render partial="Vakant" arguments="{result: result}" />
+       </f:if>
+
+       <f:if condition="{flexform.fieldset} == 'template_17'">
+           <f:render partial="International" arguments="{result: result}" />
+       </f:if>
+   </f:if>
+
+</f:section>
+
+</html>

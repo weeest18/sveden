@@ -1,0 +1,31 @@
+<f:if condition="{result}">
+    <f:then>
+        <div class="result_table">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Наименование объекта</th>
+                        <th>Адрес места нахождения</th>
+                        <th >Площадь объекта</th>
+                        <th >Количество мест</th>
+                        <th >Приспособленность для использования инвалидами и лицами с ограниченными возможностями здоровья</th>
+                    </tr>
+                </thead>
+                <f:for each="{result}" as="result">
+                    <tbody>
+                        <tr itemprop="purposeSport">
+                            <td itemprop="objName">{result.name}</td>
+                            <td itemprop="objAddress">{result.address}</td>
+                            <td itemprop="objSq">{result.ploshad}</td>
+                            <td itemprop="objCnt">{result.mesta}</td>
+                            <td itemprop="objOvz">{result.ovz}</td>
+                        </tr>
+                    </tbody>
+                </f:for>
+            </table>
+        </div>
+    </f:then>
+    <f:else>
+        <p>Данных нет</p>
+    </f:else>
+</f:if>

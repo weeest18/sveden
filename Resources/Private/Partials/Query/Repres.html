@@ -1,0 +1,35 @@
+<f:if condition="{result}">
+    <f:then>
+        <div class="result_table">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th> Наименование представительства </th>
+                        <th> ФИО руководителя </th>
+                        <th> Должность руководителя </th>
+                        <th> Адрес местонахождения </th>
+                        <th> Электронная почта </th>
+                        <th> Адрес официального сайта или страницы представительства в сети «Интернет» (при наличии) </th>
+                        <th> Положение о представительстве </th>
+                    </tr>
+                </thead>
+                <f:for each="{result}" as="result">
+                    <tbody>
+                        <tr itemprop="repInfo">
+                            <td itemprop="namRep"> {result.name} </td>
+                            <td itemprop="fio"> {result.bossname} </td>
+                            <td itemprop="post"> {result.bossrole} </td>
+                            <td itemprop="addressRep"> {result.address} </td>
+                            <td itemprop="emailRep">{result.email}</td>
+                            <td itemprop="websiteRep"><a href="{result.site}">Сайт</a> </td>
+                            <td itemprop="divisionClauseDocLink"><a href="{result.rules}">Положение</a> </td>
+                        </tr>
+                    </tbody>
+                </f:for>
+            </table>
+        </div>
+    </f:then>
+    <f:else>
+        <p>Данных нет</p>
+    </f:else>
+</f:if>

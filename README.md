@@ -1,2 +1,4 @@
-# sveden
-typo3 plugin for site
+Sitepackage for the project "sveden"
+==============================================================
+
+Add some explanation here.

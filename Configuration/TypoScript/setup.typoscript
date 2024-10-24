@@ -1,0 +1,56 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sveden/Configuration/TypoScript/query.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sveden/Configuration/TypoScript/excel.typoscript">
+
+
+################
+#### HELPER ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sveden/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+
+        templateRootPaths {
+            0 = EXT:sveden/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:sveden/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:sveden/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+
+
+    includeCSSLibs {
+
+    }
+
+    includeCSS { 
+        bootstrap = EXT:sveden/Resources/Public/Css/bootstrap.css
+        bootstrap_min = EXT:sveden/Resources/Public/Css/bootstrap.min.css 
+        nicepage = EXT:sveden/Resources/Public/Css/nicepage.css
+        main = EXT:sveden/Resources/Public/Css/main.css
+	    style = EXT:sveden/Resources/Public/Css/style.css
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+        jquery = EXT:sveden/Resources/Public/JavaScript/jquery.js
+
+    }
+
+    includeJSFooter {
+        nicepage = EXT:sveden/Resources/Public/JavaScript/nicepage.js
+        
+    }
+}

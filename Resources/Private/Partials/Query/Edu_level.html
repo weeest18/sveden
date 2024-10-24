@@ -1,0 +1,37 @@
+<f:if condition="{result}">
+    <f:then>
+        <div class="result_table">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th> Код, шифр </th>
+                        <th> Наименование профессии, специальности, направления подготовки, научной специальности </th>
+                        <th> Образовательная программа, направленность, профиль, шифр и наименование научной специальности </th>
+                        <th> Уровень образования </th>
+                        <th> Форма обучения </th>
+                        <th> Срок получения образования </th>
+                        <th> Учебные предметы, курсы, дисциплины (модули) </th>
+                        <th> Практики </th>
+                    </tr>
+                </thead>
+                <f:for each="{result}" as="result">
+                    <tbody>
+                        <tr itemprop="eduAccred">
+                            <td itemprop="eduCode"> {result.edu_code} </td>
+                            <td itemprop="eduName"> {result.edu_name} </td>
+                            <td itemprop="eduProf"> {result.edu_op} </td>
+                            <td itemprop="eduLevel"> {result.edu_ur} </td>
+                            <td itemprop="eduForm">{result.edu_form}</td>
+                            <td itemprop="learningTerm">{result.edu_time_study}</td>
+                            <td itemprop="eduPred">{result.edu_predm}"></td>
+                            <td itemprop="eduPrac">{result.edu_pract}"></td>                            
+                        </tr>
+                    </tbody>
+                </f:for>
+            </table>
+        </div>
+    </f:then>
+    <f:else>
+        <p>Данных нет</p>
+    </f:else>
+</f:if>

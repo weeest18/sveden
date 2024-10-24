@@ -1,0 +1,23 @@
+{
+    "name": "vlsu/sveden",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "homepage": "https://www.vlsu.ru",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "typo3/cms-core": "^8.7",
+        "typo3/cms-rte-ckeditor": "^8.7",
+        "typo3/cms-fluid-styled-content": "^8.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vlsu\\Sveden\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "sveden"
+        }
+    }
+}

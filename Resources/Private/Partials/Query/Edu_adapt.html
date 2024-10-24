@@ -1,0 +1,49 @@
+<f:if condition="{result}">
+    <f:then>
+        <div class="result_table">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Код, шифр</th>
+                        <th>Наименование профессии, специальности, направления подготовки, наименование группы научных
+                            специальностей</th>
+                        <th>Уровень образования</th>
+                        <th>Образовательная программа, направленность, профиль, шифр и наименование научной
+                            специальности</th>
+                        <th>Реализуемые формы обучения</th>
+                        <th>Год зачисления</th>
+                        <th>Ссылка на описание образовательной программы с приложением ее копии</th>
+                        <th>Ссылка на учебный план</th>
+                        <th>Ссылка на рабочие программы (по каждой дисциплине в составе образовательной программы)</th>
+                        <th>Ссылка на календарный учебный график</th>
+                        <th>Ссылка на рабочие программы практик, предусмотренных соответствующей образовательной программы</th>
+                        <th>Ссылка на методические и иные документы, разработанные ОО для обеспечения образовательного
+                            процесса, а также рабочие программы воспитания и календарные планы воспитательной работы,
+                            включаемых в ООП</th>
+                    </tr>
+                </thead>
+                <f:for each="{result}" as="result">
+                    <tbody>
+                        <tr itemprop="eduAdOp">
+                            <td itemprop="eduCode">{result.edu_code}</td>
+                            <td itemprop="eduName">{result.edu_name}</td>
+                            <td itemprop="eduLevel">{result.edu_lev}</td>
+                            <td itemprop="eduProf"> {result.edu_op} </td>
+                            <td itemprop="eduForm">{result.edu_form}</td>
+                            <td itemprop="" align="center"> {result.edu_year} </td>
+                            <td itemprop="opMain"><a href="{result.edu_link}"> Образовательная программа </a></td>
+                            <td itemprop="educationPlan"><a href="{result.edu_link}">Учебный план</a></td>    
+                            <td itemprop="educationRpd"><a href="{result.edu_link}">Рабочие программы дисциплин</a></td>  
+                            <td itemprop="educationShedule"><a href="{result.edu_link}">Календарный график</a></td>       
+                            <td itemprop="eduPr"><a href="{result.edu_link}">Программы практик</a></td>    
+                            <td itemprop="methodology"><a href="{result.edu_link}">Методические рекомендации</a></td>    
+                        </tr>
+                    </tbody>
+                </f:for>
+            </table>
+        </div>
+    </f:then>
+    <f:else>
+        <p>Данных нет</p>
+    </f:else>
+</f:if>

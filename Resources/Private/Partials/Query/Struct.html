@@ -1,0 +1,35 @@
+<f:if condition="{result}">
+    <f:then>
+        <div class="result_table">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th> Наименование органа управления / структурного подразделения </th>
+                        <th> ФИО руководителя структурного подразделения </th>
+                        <th> Должность руководителя структурного подразделения </th>
+                        <th> Адрес местонахождения структурного подразделения </th>
+                        <th> Адрес официального сайта структурного подразделения </th>
+                        <th> Адреса электронной почты структурного подразделения </th>
+                        <th> Положение об органе управления/ о структурном подразделении </th>
+                    </tr>
+                </thead>
+                <f:for each="{result}" as="result">
+                <tbody>
+                    <tr itemprop="structOrgUprav">
+                        <td itemprop="name"> {result.name} </td>
+                        <td itemprop="fioPost"> {result.bossname} </td>
+                        <td itemprop="post"> {result.bossrole} </td>
+                        <td itemprop="addressStr"> {result.address} </td>
+                        <td itemprop="site"><a href="{result.site}">Сайт</a> </td>
+                        <td itemprop="email">{result.email}</td>
+                        <td itemprop="divisionClauseDocLink"><a href="{result.rules}">Положение</a> </td>
+                    </tr>
+                </tbody>
+                </f:for>
+            </table>
+        </div>
+    </f:then>
+    <f:else>
+        <p>Данных нет</p>
+    </f:else>
+</f:if>

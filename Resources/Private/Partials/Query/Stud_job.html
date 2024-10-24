@@ -1,0 +1,32 @@
+<f:if condition="{result}">
+    <f:then>
+        <div class="result_table">
+            <table border="1">
+                <thead>
+                    <tr itemprop="graduateJob">
+                        <th itemprop="eduCode"><strong>Код</strong></th>
+                        <th itemprop="eduName"><strong>Наименование профессии, специальности, направления подготовки</strong></th>
+                        <th itemprop="eduProf"><strong>Образовательная программа, направленность, профиль, шифр и наименование научной специальности</strong></th>
+                        <th itemprop="v1"><strong>Численность выпускников прошлого учебного года</strong></th>
+                        <th itemprop="t1"><strong>Численность трудоустроенных выпускников прошлого учебного года</strong>
+                        </th>
+                    </tr>
+                </thead>
+                <f:for each="{result}" as="result">
+                    <tbody>
+                        <tr itemprop="graduateJob">
+                            <td itemprop="eduCode"> {result.code} </td>
+                            <td itemprop="eduName"> {result.name} </td>
+                            <td itemprop="eduProf"> {result.name} </td>
+                            <td itemprop="v1"> {result.kol_20} </td>
+                            <td itemprop="t1"> {result.trud_20} </td>
+                        </tr>
+                    </tbody>
+                </f:for>
+            </table>
+        </div>
+    </f:then>
+    <f:else>
+        <p>Данных нет</p>
+    </f:else>
+</f:if>

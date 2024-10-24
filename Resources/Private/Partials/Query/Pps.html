@@ -1,0 +1,42 @@
+<f:if condition="{result}">
+    <f:then>
+        <div class="result_table">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td> ФИО </td>
+                        <td> Должность </td>
+                        <td> Перечень преподаваемых дисциплин</td>
+                        <td> Уровень образования, квалификация </td>
+                        <td> Учёная степень </td>
+                        <td> Учёное звание </td>
+                        <td> Сведения о повышении квалификации (за последние 3 года) </td>
+                        <td> Сведения о профессиональной переподготовке (при наличии) </td>
+                        <td> Сведения о продолжительности опыта (лет) работы в профессиональной сфере </td>
+                        <td> Наименование образовательных программ, в реализации которых участвует педагогический
+                            работник</td>
+                    </tr>
+                </thead>
+                <f:for each="{result}" as="result">
+                    <tbody>
+                        <tr itemprop="teachingStaff">
+                            <td itemprop="fio"> {result.fio} </td>
+                            <td itemprop="post"> {result.role} </td>
+                            <td itemprop="teachingDiscipline"> {result.courses}</td>
+                            <td itemprop="teachingLevel"> {result.qualification} </td>
+                            <td itemprop="degree"> {result.quatily} </td>
+                            <td itemprop="academStat"> {result.quatily} </td>
+                            <td itemprop="qualification"> {result.attestation} </td>
+                            <td itemprop="profDevelopment"> {result.attestation} </td>
+                            <td itemprop="specExperience"> {result.pedstazh} </td>
+                            <td itemprop="teachingOp"></td>
+                        </tr>
+                    </tbody>
+                </f:for>
+            </table>
+        </div>
+    </f:then>
+    <f:else>
+        <p>Данных нет</p>
+    </f:else>
+</f:if>

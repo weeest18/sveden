@@ -1,0 +1,56 @@
+<f:if condition="{result}">
+    <f:then>
+        <div class="result_table">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Код образовательной программы</th>
+                        <th>Наименование специальности, направления подготовки</th>
+                        <th>Уровень образования</th>
+                        <th>Форма обучения</th>
+                        <th colspan="8">
+                            <table>
+                                <tr>
+                                    <th colspan="8">Численность обучающихся за счет (количество человек):</th>
+                                </tr>
+                                <tr>
+                                    <td>бюджетных ассигнований федерального бюджета</td>
+                                    <td>из них иностранные граждане</td>
+                                    <td>бюджетов субъектов Российской Федерации</td>
+                                    <td>из них иностранные граждане</td>
+                                    <td>местных бюджетов</td>
+                                    <td>из них иностранные граждане</td>
+                                    <td>средств физических и (или) юридических лиц</td>
+                                    <td>из них иностранные граждане</td>
+                                </tr>
+                            </table>
+                        </th>
+                        <th>Общая численность обучающихся</th>
+                    </tr>
+                </thead>
+                <f:for each="{result}" as="result">
+                    <tbody>
+                        <tr itemprop="eduChislen">
+                            <td itemprop="eduCode"> {result.eduCode} </td>
+                            <td itemprop="eduName"> {result.eduName} </td>
+                            <td itemprop="eduLevel"> {result.eduLеvel} </td>
+                            <td itemprop="eduForm"> {result.eduForm} </td>
+                            <td itemprop="numberBF">{result.numberBFpriem}</td>
+                            <td itemprop="numberBFF">{result.numberBFF}</td>
+                            <td itemprop="numberBR">{result.numberBRpriem}</td>
+                            <td itemprop="numberBRF">{result.numberBRF}</td>
+                            <td itemprop="numberBM">{result.numberBMpriem}</td>
+                            <td itemprop="numberBMF">{result.numberBMF}</td>
+                            <td itemprop="numberP">{result.numberPpriem}</td>
+                            <td itemprop="numberPF">{result.numberPF}</td>
+                            <td itemprop="numberAll">{result.priemALL}</td>
+                          </tr>
+                    </tbody>
+                </f:for>
+            </table>
+        </div>
+    </f:then>
+    <f:else>
+        <p>Данных нет</p>
+    </f:else>
+</f:if>

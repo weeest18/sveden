@@ -1,0 +1,92 @@
+
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <el>
+                    <fieldset>
+                        <TCEforms>
+                            <label>Выберите шаблон отображения данных
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="0"> 
+                                        <numIndex index="0">Таблица "Структура и органы управления образовательной организацией"</numIndex>
+                                        <numIndex index="1">template_1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">Таблица "Cведения о филиалах (при наличии филиалов)"</numIndex>
+                                        <numIndex index="1">template_2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">Таблица "Сведения о представительствах (при наличии представительств)"</numIndex>
+                                        <numIndex index="1">template_3</numIndex>
+                                    </numIndex>
+                                     <numIndex index="3">
+                                        <numIndex index="0">Таблица "Информация о реализуемых уровнях образования, о формах обучения, нормативных сроках обучения"</numIndex>
+                                        <numIndex index="1">template_4</numIndex>
+                                    </numIndex>
+                                     <numIndex index="4">
+                                        <numIndex index="0">Таблица "Информация о численности обучающихся"</numIndex>
+                                        <numIndex index="1">template_5</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">Таблица "Информация о результатах приема"</numIndex>
+                                        <numIndex index="1">template_6</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6">
+                                        <numIndex index="0">Таблица "Образование"</numIndex>
+                                        <numIndex index="1">template_7</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7">
+                                        <numIndex index="0">Таблица "Образование (информация по адаптированным образовательным программам)"</numIndex>
+                                        <numIndex index="1">template_8</numIndex>
+                                    </numIndex>
+                                    <numIndex index="8">
+                                        <numIndex index="0">Таблица "Информация о направлениях и результатах научной (научно-исследовательской) деятельности"</numIndex>
+                                        <numIndex index="1">template_9</numIndex>
+                                    </numIndex>
+                                    <numIndex index="9">
+                                        <numIndex index="0">Таблица "О трудоустройстве выпускников образовательных организаций за прошлый учебный год"</numIndex>
+                                        <numIndex index="1">template_10</numIndex>
+                                    </numIndex>
+                                    <numIndex index="10">
+                                        <numIndex index="0">Таблица "Информация о составе педагогических работников образовательной программы"</numIndex>
+                                        <numIndex index="1">template_11</numIndex>
+                                    </numIndex>
+                                    <numIndex index="11">
+                                        <numIndex index="0">Таблица "О наличии оборудованных учебных кабинетов"</numIndex>
+                                        <numIndex index="1">template_12</numIndex>
+                                    </numIndex>
+                                    <numIndex index="12">
+                                        <numIndex index="0">Таблица "Сведения об объектах для проведения практических занятий"</numIndex>
+                                        <numIndex index="1">template_13</numIndex>
+                                    </numIndex>
+                                    <numIndex index="13">
+                                        <numIndex index="0">Таблица "Сведения о наличии библиотек"</numIndex>
+                                        <numIndex index="1">template_14</numIndex>
+                                    </numIndex>
+                                    <numIndex index="14">
+                                        <numIndex index="0">Таблица "Сведения о наличии библиотек"</numIndex>
+                                        <numIndex index="1">template_15</numIndex>
+                                    </numIndex>
+                                    <numIndex index="15">
+                                        <numIndex index="0">Таблица "Вакантные места для приёма (перевода) обучающихся"</numIndex>
+                                        <numIndex index="1">template_16</numIndex>
+                                    </numIndex>
+                                    <numIndex index="16">
+                                        <numIndex index="0">Таблица "Международное сотрудничество"</numIndex>
+                                        <numIndex index="1">template_17</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </fieldset>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

@@ -1,0 +1,29 @@
+<f:if condition="{result}">
+    <f:then>
+        <div class="result_table">
+            <table border="1">
+                <thead>
+                    <tr>
+                    <tr>
+                        <th> Название государства </th>
+                        <th> Название организации </th>
+                        <th> Реквизиты договора (наименование, дата, номер, срок действия) </th>
+                    </tr>
+                    </tr>
+                </thead>
+                <f:for each="{result}" as="result">
+                    <tbody>
+                        <tr itemprop="internationalDog">
+                            <td itemprop="stateName">{result.country}</td>
+                            <td itemprop="orgName">{result.name}</td>
+                            <td itemprop="dogReg">{result.contract}</td>
+                        </tr>
+                    </tbody>
+                </f:for>
+            </table>
+        </div>
+    </f:then>
+    <f:else>
+        <p>Данных нет</p>
+    </f:else>
+</f:if>

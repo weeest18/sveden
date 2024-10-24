@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems.sveden {
+    header = Sveden
+    elements {
+     query {
+         iconIdentifier = content-text
+         title = Query
+         description = Выборка данных из внешних таблиц
+         tt_content_defValues {
+             CType = query
+         }
+     }
+ }
+ show := addToList(query)
+}
+ 

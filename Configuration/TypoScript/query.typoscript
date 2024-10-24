@@ -1,0 +1,22 @@
+tt_content.query >
+tt_content.query =< lib.contentElement
+tt_content.query {
+    templateName = Query
+
+    dataProcessing {
+       10 = Vlsu\Sveden\DataProcessing\FlexFormProcessor  
+       10 {
+        fieldName = pi_flexform
+        as = flexform
+       }
+       20 = Vlsu\Sveden\DataProcessing\TableSelectionProcessor
+            20 {
+                fieldName = tbl  
+            }
+    }
+}
+
+lib.contentElement {
+  templateRootPaths.400 = EXT:sveden/Resources/Private/Templates/Query/
+  partialRootPaths.400 = EXT:sveden/Resources/Private/Partials/Query/
+}

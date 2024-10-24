@@ -1,0 +1,27 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:sveden/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:sveden/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:sveden/Resources/Private/Templates/ContentElements/
+    }
+}
+
+##############
+### CONFIG ###
+##############
+config {
+    no_cache = 0
+    removeDefaultJS = 0
+    admPanel = 1
+    prefixLocalAnchors = all
+    sendCacheHeaders = 1
+}

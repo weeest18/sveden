@@ -1,0 +1,37 @@
+<f:if condition="{result}">
+    <f:then>
+        <div class="result_table">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td>Код</td>
+                        <td>Наименование профессии, специальности, направления подготовки, наименование группы научных специальностей </td>
+                        <td>Перечень научных направлений, в рамках которых ведется научная (научно-исследовательская) деятельность </td>
+                        <td>Образовательная программа, направленность, профиль, шифр и наименование научной специальности </td>
+                        <td>Уровень образования </td>
+                        <td>Название научного направления/научной школы </td>
+                        <td>Результаты научной (научно-исследовательской) деятельности </td>
+                        <td>Сведения о научно-исследовательской базе для осуществления научной (научно-исследовательской) деятельности</td>
+                    </tr>
+                </thead>
+                <f:for each="{result}" as="result">
+                    <tbody>
+                        <tr itemprop="eduNir">
+                            <td itemprop="eduCode">{result.idop}</td>
+                            <td itemprop="eduName">{result.name_op}</td>
+                            <td itemprop="perechenNir">{result.perechenNir}</td>
+                            <td itemprop="eduProf">{result.name_op} </td>
+                            <td itemprop="eduLevel"></td>    
+                            <td itemprop="napravNir"></td>
+                            <td itemprop="resultNir"></td>
+                            <td itemprop="baseNir"></td>   
+                          </tr>
+                    </tbody>
+                </f:for>
+            </table>
+        </div>
+    </f:then>
+    <f:else>
+        <p>Данных нет</p>
+    </f:else>
+</f:if>

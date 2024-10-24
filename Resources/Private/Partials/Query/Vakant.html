@@ -1,0 +1,41 @@
+<f:if condition="{result}">
+    <f:then>
+        <div class="result_table">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Код, шифр группы научных специальностей</th>
+                        <th>Наименование профессии, специальности, направления подготовки, наименование группы научных специальностей</th>
+                        <th>Уровень образования</th>
+                        <th>Образовательная программа, направленность, профиль, шифр и наименование научной специальности</th>
+                        <th>Курс</th>
+                        <th>Форма обучения</th>
+                        <th>Количество вакантных мест для приема (перевода) на места, финансируемые за счет бюджетных ассигнований федерального бюджета</th>
+                        <th>Количество вакантных мест для приема (перевода) на места, финансируемые за счет бюджетов субъектов Российской Федерации</th>
+                        <th>Количество вакантных мест для приема (перевода) на места, финансируемые за счет местных бюджетов</th>
+                        <th>Количество вакантных мест для приема (перевода) за счёт средств физических и (или) юридических лиц</th>
+                    </tr>
+                </thead>
+                <f:for each="{result}" as="result">
+                    <tbody>
+                        <tr itemprop="vacant">
+                            <td itemprop="eduCode">{result.idop}</td>
+                            <td itemprop="eduName">{result.name_op_pr}</td>
+                            <td itemprop="eduLevel">{result.uo}</td>
+                            <td itemprop="eduProf">{result.edu_prof} </td>
+                            <td itemprop="eduCourse">{result.kurs}</td>    
+                            <td itemprop="eduForm">{result.form}</td>
+                            <td itemprop="numberBFVacant">{result.federal}</td>
+                            <td itemprop="numberBRVacant">{result.sub_fed}</td>
+                            <td itemprop="numberBMVacant">{result.mest}</td>
+                            <td itemprop="numberPVacant">{result.indiv}</td>    
+                          </tr>
+                    </tbody>
+                </f:for>
+            </table>
+        </div>
+    </f:then>
+    <f:else>
+        <p>Данных нет</p>
+    </f:else>
+</f:if>
